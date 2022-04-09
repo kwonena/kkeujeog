@@ -1,0 +1,19 @@
+$makerBlack: #000000;
+$makerWhite: #ffffff;
+
+.header {
+    width: 100%;
+    text-align: center;
+    padding: 0.5em;
+    background-color: $makerBlack;
+    position: relative;
+}
+
+.logo {
+    width: 3em;
+}
+
+.title {
+    margin: 0;
+    color: $makerWhite;
+}
