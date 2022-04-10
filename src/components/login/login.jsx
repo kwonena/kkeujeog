@@ -16,16 +16,16 @@ const Login = () => {
     <section className="login">
       <Header />
       <section>
-        <h1>Login</h1>
+        <h1 className="loginTitle">LOGIN</h1>
         <ul className="list">
           <li className="item">
             <button className="button" onClick={onLogin}>
-              Google
+              <p className="text">Google</p>
             </button>
           </li>
           <li className="item">
             <button className="button" onClick={onLogin}>
-              Github
+              <p className="text">Github</p>
             </button>
           </li>
         </ul>

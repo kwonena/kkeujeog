@@ -7,6 +7,13 @@ $makerWhite: #ffffff;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-color: $makerWhite;
+    -webkit-box-shadow: 10px 10px 21px 7px rgba(0, 0, 0, 0.42);
+    box-shadow: 10px 10px 21px 7px rgba(0, 0, 0, 0.42);
+}
+
+.loginTitle {
+    font-size: 1.8rem;
 }
 
 .list {
@@ -22,7 +29,7 @@ $makerWhite: #ffffff;
 }
 
 .button {
-    width: 100%;
+    width: 95%;
     height: 2.5em;
     font-size: 1.2rem;
     border-radius: 1.2rem;
@@ -33,5 +40,10 @@ $makerWhite: #ffffff;
 }
 
 .button:hover {
-    background-color: #555555;
+    background-color: #d4d4d4;
+}
+
+.text {
+    margin: 0;
+    font-weight: bold;
 }
