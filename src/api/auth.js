@@ -22,6 +22,13 @@ export const login = (providerName) => {
   return signInWithPopup(auth, authProvider);
 };
 
+// 사용자의 로그인 여부를 확인하는 함수
+export const onAuthChange = (onUserChanged) => {
+  auth.onAuthStateChanged((user) => {
+    onUserChanged(user);
+  });
+};
+
 // 소셜로그인 종류에 따라
 export const getProvider = (providerName) => {
   switch (providerName) {
