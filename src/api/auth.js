@@ -22,6 +22,11 @@ export const login = (providerName) => {
   return signInWithPopup(auth, authProvider);
 };
 
+// 로그아웃 함수
+export const logout = () => {
+  auth.signOut();
+};
+
 // 사용자의 로그인 여부를 확인하는 함수
 export const onAuthChange = (onUserChanged) => {
   auth.onAuthStateChanged((user) => {
