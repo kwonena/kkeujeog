@@ -4,6 +4,8 @@ import Header from "../header/header";
 import "./main.scss";
 import * as auth from "../../api/auth.js";
 import { useNavigate } from "react-router-dom";
+import Preview from "../preview/preview";
+import Category from "../category/category";
 
 const Main = (props) => {
   const navigate = useNavigate();
@@ -22,6 +24,10 @@ const Main = (props) => {
   return (
     <section className="main">
       <Header onLogout={onLogout} />
+      <div>
+        <Category />
+        <Preview />
+      </div>
       <Footer />
     </section>
   );

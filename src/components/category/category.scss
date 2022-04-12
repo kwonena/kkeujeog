@@ -1,0 +1,41 @@
+@import '../../common/colors.scss';
+
+.category {
+    flex-basis: 20%;
+    background-color: $makerWhite;
+    padding: 0.5em 2em;
+
+    div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .addContainer {
+        h1 {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 1em;
+            color: makerGreen;
+        }
+        button {
+            background-color: $makerBlack;
+            color: $makerWhite;
+            width: 20em;
+            height: 3.5em;
+            border-radius: 2em;
+            border: 0;
+            cursor: pointer;
+            outline: 0;
+        }
+        span {
+            margin-top: 1em;
+        }
+    }
+
+    .categoryContainer {
+
+    }
+    
+}
