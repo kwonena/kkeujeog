@@ -1,5 +1,4 @@
-$makerBlack: #000000;
-$makerWhite: #ffffff;
+@import '../../common/colors.scss';
 
 .login {
     width: 30em;
@@ -40,7 +39,7 @@ $makerWhite: #ffffff;
 }
 
 .button:hover {
-    background-color: #d4d4d4;
+    background-color: $makerGrey;
 }
 
 .text {
