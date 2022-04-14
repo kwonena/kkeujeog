@@ -1,16 +1,24 @@
+@import '../../common/size.scss';
+
 .preview {
     flex-basis: 80%;
 
     .container {
         width: 100%;
-        height: 100%;
+        height: 100vh;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: flex-start;
         align-content: flex-start;
         padding: 0.8em;
-        
+        overflow: scroll;
+        padding-bottom: 5em;
     }
 }
 
+@media screen and (max-width: $mediaQuery) {
+    .preview .container {
+        padding-bottom: 21em;
+    }
+}
