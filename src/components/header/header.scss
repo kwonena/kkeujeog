@@ -12,11 +12,13 @@ $makerWhite: #ffffff;
 .logo {
     width: 2em;
     margin-bottom: 0.2em;
+    cursor: pointer;
 }
 
 .title {
     margin: 0;
     color: $makerWhite;
+    cursor: pointer;
 }
 
 .comment {
