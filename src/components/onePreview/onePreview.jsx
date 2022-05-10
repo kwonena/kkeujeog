@@ -3,7 +3,7 @@ import "./onePreview.scss";
 
 const OnePreview = (props) => (
   <section className="onePreview">
-    <div>category</div>
+    <div>onePreview</div>
   </section>
 );
 

@@ -1,17 +1,17 @@
 import React from "react";
-import AddReview from "../addReview/addReview";
+import OnePreview from "../onePreview/onePreview";
 import Footer from "../footer/footer";
 import Header from "../header/header";
-import OnePreview from "../onePreview/onePreview";
+import AddPreview from "../addPreview/addPreview";
 import "./editor.scss";
 
-const Editor = (props) => {
+const Editor = ({ addReview }) => {
   return (
     <section className="editor">
       <Header />
       <div>
-        <AddReview />
         <OnePreview />
+        <AddPreview addReview={addReview} />
       </div>
       <Footer />
     </section>
