@@ -11,7 +11,7 @@ import * as repository from "../../api/repository.js";
 const Main = (props) => {
   const navigate = useNavigate();
   const navigeteState = useLocation().state;
-  const [reviews, setreviews] = useState([
+  const [reviews, setReviews] = useState([
     {
       id: "1",
       title: "지구에서 한아뿐",
@@ -39,10 +39,13 @@ const Main = (props) => {
   ]);
   const [userId, setUserId] = useState(navigeteState && navigeteState.id);
   console.log(userId);
+
+  // 로그아웃 함수
   const onLogout = () => {
     auth.logout();
   };
 
+  // 사용자 로그인 여부 확인
   useEffect(() => {
     auth.onAuthChange((user) => {
       if (user) {
@@ -53,17 +56,20 @@ const Main = (props) => {
     });
   }, [navigate, userId]);
 
+  // 리뷰 추가 함수
   const addReview = (review) => {
-    setreviews((reviews) => {
-      const updated = { ...reviews };
-      updated[review.id] = review;
-      return updated;
-    });
-    repository.saveReview(userId, review);
+    console.log(review);
+    // setReviews((reviews) => {
+    //   const updated = { ...reviews };
+    //   updated[review.id] = review;
+    //   return updated;
+    // });
+    // repository.saveReview(userId, review);
   };
 
+  // 리뷰 삭제 함수
   const deleteReview = (review) => {
-    setreviews((reviews) => {
+    setReviews((reviews) => {
       const updated = { ...reviews };
       delete updated[review.id];
       return updated;
@@ -75,7 +81,7 @@ const Main = (props) => {
     <section className="main">
       <Header onLogout={onLogout} />
       <div>
-        <Category reviews={reviews} addReview={addReview} />
+        <Category addReview={addReview} />
         <Preview reviews={reviews} />
       </div>
       <Footer />

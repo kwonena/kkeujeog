@@ -1,41 +1,73 @@
 @import '../../common/colors.scss';
+@import '../../common/size.scss';
 
 .category {
     flex-basis: 20%;
     background-color: $makerWhite;
     padding: 0.5em 2em;
+}
+.container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
 
-    div {
-        display: flex;
+    .addContainer {
+        flex-basis: 30%;
         flex-direction: column;
+        margin-bottom: 1.5rem;
         justify-content: center;
         align-items: center;
-    }
-    
-    .addContainer {
+
+
         h1 {
             width: 100%;
             text-align: center;
             margin-bottom: 1em;
             color: makerGreen;
         }
+
         button {
             background-color: $makerBlack;
             color: $makerWhite;
-            width: 20em;
+            width: 100%;
             height: 3.5em;
             border-radius: 2em;
             border: 0;
             cursor: pointer;
             outline: 0;
         }
+
         span {
             margin-top: 1em;
         }
     }
 
     .categoryContainer {
+        flex-basis: 70%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
+        div {
+            display: flex;
+        }
+
+        input {
+            width: 100%;
+            height: 3.5em;
+            border-radius: 2em;
+            border: 2.2px solid $makerBlack;
+            cursor: pointer;
+            outline: 0;
+            padding: 0.8em 1.2em;
+        }
     }
+
+}
     
+
+@media screen and (max-width: $mediaQuery) {
+    .container {
+        flex-direction: row;
+    }
 }

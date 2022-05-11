@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./category.scss";
 
-const Category = () => {
+const Category = ({ addReview }) => {
   const navigate = useNavigate();
 
   return (
@@ -10,7 +10,16 @@ const Category = () => {
       <div className="container">
         <div className="addContainer">
           <h1>권이나님, 환영합니다.</h1>
-          <button onClick={() => navigate("/editor")}>+ 새 리뷰 등록</button>
+          <button
+            onClick={() =>
+              navigate({
+                pathname: "/editor",
+                state: { addReview },
+              })
+            }
+          >
+            + 새 리뷰 등록
+          </button>
           <span>전체 리뷰 - 0개</span>
         </div>
         <div className="categoryContainer">

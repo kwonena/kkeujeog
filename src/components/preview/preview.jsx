@@ -4,11 +4,11 @@ import "./preview.scss";
 
 const Preview = ({ reviews }) => (
   <section className="preview">
-    <div className="container">
+    <ul className="container">
       {reviews.map((review) => (
         <Review review={review} key={review.id} />
       ))}
-    </div>
+    </ul>
   </section>
 );
 
